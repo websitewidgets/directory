@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SAY THEIR NAMES</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+
+  html {
+    width: 100%;
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    font-size: 64px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  p {
+    color: white;
+    padding: 1em;
+    padding-bottom: 1.5em;
+    word-spacing: 0.2em;
+  }
+
+  </style>
+
+</head>
+
+<body>
+  <p>GEORGE FLOYD</p>
+</body>
+
+<script>
+
+  var names = [
+    "GEORGE FLOYD",
+    "BREONNA TAYLOR",
+    "AHMAUD ARBERY",
+    "SANDRA BLAND",
+    "MICHAEL BROWN",
+    "PHILANDO CASTILE",
+    "TAMIR RICE",
+    "ERIC GARNER",
+    "FREDDIE GRAY",
+    "TRAYVON MARTIN",
+    "NINA POP",
+    "SEAN REED"
+  ];
+
+  var counter = 0;
+
+  function change() {
+    if (counter == names.length) { counter = 0; }
+    var currentName = names[counter];
+    var textElement = document.querySelector("p");
+    var pageTitle = document.querySelector("title");
+    textElement.innerHTML = currentName;
+    pageTitle.innerHTML = currentName;
+    setTimeout(change, 3000);
+    counter++;
+  }
+
+  change();
+
+</script>
+</html>
